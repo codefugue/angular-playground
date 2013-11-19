@@ -1,5 +1,20 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div>
+	<h2>File Explorer</h2>
+	<div style="border : 1px solid grey; margin:5px; display:inline-block;">
+		<div ng-repeat="folder in folders">
+			<li>{{folder.name}}</li>
+			<ul>	
+				<li ng-repeat="file in folder.files" ng-click="getFile(file.filename)">
+					<a href="">{{file.filename}}</a>
+				</li>
+			</ul>
+		</div>
+	</div>	
+	<div style="border : 1px solid grey; margin:5px; display:inline-block;">
+		<div ng-repeat="row in currentFile" >
+			<label>name</label><input ng-model="row.name">
+			<label>age</label><input ng-model="row.age">
+		</div>
+		<button ng-show="currentFile" type="button" ng-click="addNewPerson()">add new person</button>
+	</div>
+</div>

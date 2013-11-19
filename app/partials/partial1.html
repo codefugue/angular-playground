@@ -1,1 +1,10 @@
-<p>This is the partial for view 1.</p>
+<div>
+	<h2>Items display</h2>
+	<button ng-click="loadData()">loadData</button>		
+	<div>
+		<div ng-repeat="item in list" >
+			<span>{{item.name}}</span>
+			<span>{{item.value}}</span>
+		</div>
+	</div>
+</div>
