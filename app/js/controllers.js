@@ -29,6 +29,9 @@ angular.module('myApp.controllers', ['myApp.services']).
   	$scope.folders = myService.getTree();
 
   	$scope.addNewPerson = function(){
-  		$scope.currentFile.push({name:"",age:""});
+  		if($scope.currentFile){
+  			$scope.currentFile.push({name:"",age:""});	
+  		}
+  		
   	};
   }]);
