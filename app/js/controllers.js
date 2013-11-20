@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', ['myApp.services']).
+angular.module('myApp.controllers', ['myApp.services', 'ui.sortable']).
   controller('MyCtrl1',['$scope','myService',function($scope,myService) {
 
   	var items = [

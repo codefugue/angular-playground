@@ -10,8 +10,8 @@
 			</ul>
 		</div>
 	</div>	
-	<div style="border : 1px solid grey; margin:5px; display:inline-block;">
-		<div ng-repeat="row in currentFile" >
+	<div ui-sortable style="border : 1px solid grey; margin:5px; display:inline-block;" ng-model="currentFile">
+		<div ng-repeat="row in currentFile"  >
 			<label>name</label><input ng-model="row.name">
 			<label>age</label><input ng-model="row.age">
 		</div>
